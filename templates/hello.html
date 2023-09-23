@@ -1,0 +1,12 @@
+{% for i in movies %}
+<br>
+<h1>Title : {{i.title | upper}}</h1>
+<h3>Summary : {{i.summary | default:'No data available' | lower}}</h3>
+<h3>Year : {{i.year}}</h3>
+{% if i.success %}
+<p>Movie was a success at that time</p>
+{% else %}
+<p>Movie was a Failure</p>
+{% endif %}
+<br>
+{% endfor %}
